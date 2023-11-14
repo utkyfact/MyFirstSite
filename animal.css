@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* height: 350vh; */
+    background-image: url(./zoobg.jpg);
+    background-repeat: repeat-y;
+    background-size: 100% 100%;
+}
+
+.navbar{
+    width: 100%;
+    /* height: 125px; */
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    font-family: ;
+}
+
+.gizle{
+    list-style: none;
+}
+
+.gizle .gizlee{
+    display: none;
+}
+
+.gizlee:hover{
+    background-color: hotpink;
+}
+
+.gif{
+    width: 100px;
+    height: 100px;
+    background-image: url(./horse.gif);
+    background-position: center;
+    
+}
+.logo{
+    width: 120px;
+    padding: 5px;
+}
+ .logo img{
+     width: 100%;
+}
+
+.list{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.list-item a{
+    color: #551A8B;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.list-item a:hover{
+    background-color: hotpink;
+    color: antiquewhite;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    box-sizing: border-box;
+    gap: 20px;
+    padding: 10px;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.card{
+    position: relative;
+}
+
+.imgbir{
+    position: absolute;
+}
+
+.yazi{
+    background-color: wheat;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    
+}
+
+.box{
+    width:inherit;
+    height: inherit;
+    border: 1px solid black;
+    backface-visibility: hidden;
+}
+
+.kutucuk{
+    display: none;
+}
+
+.yazi{
+    transform: rotateY(180deg);
+}
+
+.imgbir{
+    transform: rotateY(0deg);
+    
+}
+
+.kutucuk:checked ~ .card .yazi{
+    transform: rotateY(0deg);
+    transition-duration: 1.5s;
+}
+.kutucuk:checked ~ .card .imgbir{
+    transform: rotateY(180deg);
+    transition-duration: 1.5s;
+}
+
+.enalt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        
+}
+
+.enalt ul{
+    display: flex;
+    text-decoration: none;
+    gap: 20px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.enalt ul li{
+    font-size: 12px;
+}
+
+ul .dil{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.enalt ul li a{
+    text-decoration: none;
+    color: black;
+}
+.enalt ul li a:hover{
+    color: hotpink;
+}
+
+span{
+    color: goldenrod;
+    padding: 10px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: wheat;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(90, 18, 90);
+    border: 3px solid rgb(255, 255, 255);
+}
+
+
+@font-face { font-family: Animals; src: url('animal.ttf'); } 
+
+.yazi{
+    font-family: sans-serif;
+}
+
+.navbar{
+         font-family: Animals;
+ }
+
+ @media (max-width:950px) {
+    .gif{
+        display: none;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 300px 300px 300px 300px;
+
+    }
+ }
+
+ @media (max-width:800px) {
+    .gif{
+        display: none;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 300px 300px 300px 300px;
+
+    }
+ }
+
+@media (max-width:600px) {
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    
+    .gizle .gizlee{
+        display: initial;
+    }
+
+    
+    .listasil a {
+        text-decoration: none;
+        font-weight: 400px;
+        font-size: 16px;
+        display: block;
+    }
+      
+    .listasil > li {
+        position: relative;
+        /* display: inline-block; */
+        z-index: 3;
+    }
+    
+    .listasil .list .list-item a{
+        background-color: antiquewhite;
+    }
+    
+    .listasil .list .list-item a:hover{
+        background-color: hotpink;
+    }
+      
+    .listasil > li > a {
+        color: #551A8B;
+        font-size: 30px;
+        background:transparent;
+        border: 2px solid black;
+        padding: 20px 25px;
+        border-radius: 20px;
+    }
+     
+    .listasil > li ul {
+        position: absolute;
+        display: none;
+        top: 100%;
+        right: 12px;
+        width: 100px;
+        background-color: transparent;
+        border-radius: 20px;
+    }
+      
+    .listasil > li ul li a {
+        color: #551A8B;
+        padding: 10px 15px;
+        
+    }
+      
+    .listasil > li ul li:hover a {
+        background-color: hotpink;
+        transform: scale(1.2);
+    }
+      
+    .listasil > li:hover ul {
+        display: block;
+    }
+    .logo img{
+        width: 80%;
+        margin: auto;
+    }
+
+    .list li a{
+        font-size: 16px;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 300px 300px 300px 300px;
+         
+    }
+
+    .yazi{
+        overflow: hidden;
+    }
+    .enalt ul{
+        gap: 5px;
+    }
+    .enalt li a{
+       font-size: 14px;
+    }
+    .enalt span{
+        font-size: 12px;
+     }
+
+ }
+
+
+@media (max-width:450px) {
+    .listasil > li ul {
+        top: 0;
+        right: 0;
+        padding-top: 16px;
+        right: -4px;
+        width: 90px;
+        background-color: transparent;
+        border-radius: 20px;
+    }
+
+    .listasil > li > a {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    .listasil a {
+        font-weight: 100px;
+        font-size: 12px;
+    }
+    .dil{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:375px) {
+    .yazi{
+        font-size:10px;
+    }
+}
+@media (max-width:300px) {
+    .enalt li a{
+        font-size: 10px;
+    }
+}
