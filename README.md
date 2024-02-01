@@ -1,1 +1,1 @@
-https://utkyfact.github.io/Odev12/
+https://utkyfact.github.io/MyFirstSite/
